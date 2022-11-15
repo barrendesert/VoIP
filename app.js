@@ -1,7 +1,9 @@
 const config =  require('./config.js');
 
 const express = require('express')
+const logger = require('morgan');
 const app = express()
+app.use(logger('dev'));
 var bodyParser = require('body-parser')
 const cors = require("cors");
 require('dotenv').config()
